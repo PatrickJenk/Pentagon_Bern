@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,10 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   readonly loginForm: FormGroup;
 
-  constructor(private readonly formBuilder: FormBuilder) {
+    constructor(
+    private readonly formBuilder: FormBuilder,
+    private readonly router: Router
+  ) {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -25,6 +29,8 @@ export class LoginComponent {
       return;
     }
 
-    console.info('Login form submitted', this.loginForm.value);
+        const { username, password } = this.loginForm.value;
+    console.info('Login form submitted', { username, password });
+    void this.router.navigate(['/welcome']);
   }
 }
