@@ -1,0 +1,46 @@
+# See https://angular.io/guide/setup-local#configure-editor
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/extensions.json
+
+# misc
+/.angular/cache
+/.angular/cache/**
+
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Environment files
+*.env
+*.local

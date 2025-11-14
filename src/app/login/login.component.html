@@ -1,0 +1,22 @@
+<section class="login-card">
+  <h2 class="login-title">Sign in</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <label class="form-field">
+      <span>Username</span>
+      <input type="text" formControlName="username" placeholder="Enter your username" />
+      <small *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        Username is required (min. 3 characters).
+      </small>
+    </label>
+
+    <label class="form-field">
+      <span>Password</span>
+      <input type="password" formControlName="password" placeholder="Enter your password" />
+      <small *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        Password is required (min. 6 characters).
+      </small>
+    </label>
+
+    <button type="submit" [disabled]="loginForm.invalid">Log in</button>
+  </form>
+</section>

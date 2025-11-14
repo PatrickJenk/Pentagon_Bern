@@ -1,0 +1,16 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1d1f3b, #2e3c7e);
+  color: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.app-title {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
