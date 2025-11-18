@@ -8,8 +8,8 @@
 }
 
 .welcome img {
-  max-width: 320px;
-  width: 100%;
+  max-width: 1500px;
+  width: 600%;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
